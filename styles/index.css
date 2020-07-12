@@ -1,6 +1,33 @@
 @tailwind base;
 
 /* Write your own custom base styles here */
+:root {
+  --wwtYellow: #fbff00;
+}
+
+a {
+  position: relative;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.link:after {
+  content: '';
+  position: absolute;
+  width: 105%;
+  height: 18px;
+  bottom: 0;
+  left: -2.5%;
+  background: var(--wwtYellow);
+  transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.link:hover:after {
+  height: 100%;
+}
 
 /* Start purging... */
 @tailwind components;

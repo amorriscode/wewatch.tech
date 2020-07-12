@@ -1,53 +1,67 @@
-import { useRouter } from 'next/router'
-import ErrorPage from 'next/error'
-import Container from '../../components/container'
-import PostBody from '../../components/post-body'
-import Header from '../../components/header'
-import PostHeader from '../../components/post-header'
-import Layout from '../../components/layout'
-import { getPostBySlug, getAllPosts } from '../../lib/api'
-import PostTitle from '../../components/post-title'
 import Head from 'next/head'
-import { CMS_NAME } from '../../lib/constants'
-import markdownToHtml from '../../lib/markdownToHtml'
+
 import PostType from '../../types/post'
+
+import markdownToHtml from '../../lib/markdownToHtml'
+import { getPostBySlug, getAllPosts } from '../../lib/api'
+
+import Container from '../../components/Container'
+import Header from '../../components/Header'
+import Layout from '../../components/Layout'
+import DateFormatter from '../../components/DateFormatter'
+
+import markdownStyles from '../../components/markdown-styles.module.css'
 
 type Props = {
   post: PostType
-  morePosts: PostType[]
-  preview?: boolean
 }
 
-const Post = ({ post, morePosts, preview }: Props) => {
-  const router = useRouter()
-  if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />
-  }
+const Post = ({ post }: Props) => {
   return (
-    <Layout preview={preview}>
+    <Layout>
       <Container>
         <Header />
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
-            <article className="mb-32">
-              <Head>
-                <title>
-                  {post.title} | Next.js Blog Example with {CMS_NAME}
-                </title>
-                <meta property="og:image" content={post.ogImage.url} />
-              </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-              />
-              <PostBody content={post.content} />
-            </article>
-          </>
-        )}
+        <article>
+          <h1 className="text-6xl md:text-7xl font-bold">
+            {post.title}
+          </h1>
+
+          <p className="text-xl md:text-2xl bg-black text-white rounded-b-lg p-4 md:flex justify-between items-center">
+            <div>
+              presented by {post.presenter} <span className="text-wwt-yellow">@</span> {post.conference}
+            </div>
+
+            <div className="text-base md:text-lg"><DateFormatter dateString={post.date} /></div>
+          </p>
+
+          <div className="video-container my-10 rounded-lg">
+            <iframe src={post.embed} frameBorder="0" width="560" height="315"></iframe>
+          </div>
+
+          <div className="max-w-3xl mx-auto">
+            <div
+              className={markdownStyles['markdown']}
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
+          </div>
+        </article>
+        <style jsx>{`
+          .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0; 
+            overflow: hidden;
+          }
+          .video-container iframe,
+          .video-container object,
+          .video-container embed {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+          }
+        `}</style>
       </Container>
     </Layout>
   )
@@ -66,10 +80,11 @@ export async function getStaticProps({ params }: Params) {
     'title',
     'date',
     'slug',
-    'author',
+    'excerpt',
+    'presenter',
+    'conference',
     'content',
-    'ogImage',
-    'coverImage',
+    'embed',
   ])
   const content = await markdownToHtml(post.content || '')
 

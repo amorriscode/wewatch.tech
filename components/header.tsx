@@ -1,13 +1,16 @@
 import Link from 'next/link'
 
+import Logo from './Logo'
+
 const Header = () => {
   return (
-    <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8">
+    <div className="mt-5 mb-10">
       <Link href="/">
-        <a className="hover:underline">Blog</a>
+        <a>
+          <Logo small />
+        </a>
       </Link>
-      .
-    </h2>
+    </div>
   )
 }
 

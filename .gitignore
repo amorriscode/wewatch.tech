@@ -1,2 +1,5 @@
 .env
 .now
+.next
+
+.DS_Store

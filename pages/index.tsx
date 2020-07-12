@@ -1,39 +1,35 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
-import Layout from '../components/layout'
-import { getAllPosts } from '../lib/api'
 import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
+
+import { getAllPosts } from '../lib/api'
 import Post from '../types/post'
 
+import Container from '../components/Container'
+import Logo from '../components/Logo'
+import Layout from '../components/Layout'
+import LatestPost from '../components/LatestPost'
+
 type Props = {
-  allPosts: Post[]
+  allPosts: Post[];
 }
 
 const Index = ({ allPosts }: Props) => {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
+  const latestPost = allPosts[0]
+
   return (
     <>
       <Layout>
         <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
+          <title>Great tech talks distilled.</title>
         </Head>
         <Container>
-          <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          <Logo />
+
+          <div className="rounded-lg bg-wwt-yellow w-full my-12 md:my-24 leading-tight space-y-10 md:space-y-20 p-10 md:p-20 font-bold">
+            <p className="text-6xl md:text-7xl">I watch conference talks so you don't have to.</p>
+            <p className="text-sm">(but you should too because they're totally awesome)</p>
+          </div>
+
+          <LatestPost post={latestPost} />
         </Container>
       </Layout>
     </>
@@ -47,9 +43,9 @@ export const getStaticProps = async () => {
     'title',
     'date',
     'slug',
-    'author',
-    'coverImage',
     'excerpt',
+    'presenter',
+    'conference',
   ])
 
   return {
