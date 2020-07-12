@@ -5,10 +5,10 @@ import PostType from '../../types/post'
 import markdownToHtml from '../../lib/markdownToHtml'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
 
-import Container from '../../components/Container'
-import Header from '../../components/Header'
-import Layout from '../../components/Layout'
-import DateFormatter from '../../components/DateFormatter'
+import Container from '../../components/_Container'
+import Header from '../../components/_Header'
+import Layout from '../../components/_Layout'
+import DateFormatter from '../../components/_DateFormatter'
 
 import markdownStyles from '../../components/markdown-styles.module.css'
 

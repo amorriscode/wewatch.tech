@@ -5,10 +5,10 @@ import Post from '../../types/post'
 
 import { getAllPosts } from '../../lib/api'
 
-import Container from '../../components/Container'
-import Header from '../../components/Header'
-import Layout from '../../components/Layout'
-import DateFormatter from '../../components/DateFormatter'
+import Container from '../../components/_Container'
+import Header from '../../components/_Header'
+import Layout from '../../components/_Layout'
+import DateFormatter from '../../components/_DateFormatter'
 
 type Props = {
   allPosts: Post[]
