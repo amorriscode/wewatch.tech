@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 import Post from '../types/post'
 
-import DateFormatter from '../components/DateFormatter'
+import DateFormatter from './DateFormatter'
 
 type Props = {
   post: Post;

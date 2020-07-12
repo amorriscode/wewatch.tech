@@ -3,10 +3,10 @@ import Head from 'next/head'
 import { getAllPosts } from '../lib/api'
 import Post from '../types/post'
 
-import Container from '../components/_Container'
+import Container from '../components/Container'
 import Logo from '../components/Logo'
-import Layout from '../components/_Layout'
-import LatestPost from '../components/_LatestPost'
+import Layout from '../components/Layout'
+import LatestPost from '../components/LatestPost'
 
 type Props = {
   allPosts: Post[];
