@@ -29,7 +29,6 @@ const Meta = () => {
         name="description"
         content={`I watch conference talks so you don't have to.`}
       />
-      <meta property="og:image" content="/assets/og.png" />
     </Head>
   )
 }

@@ -37,6 +37,7 @@ const Post = ({ post }: Props) => {
   return (
     <Layout>
       <Head>
+        <title>{post.title} | we watch tech</title>
         <meta property="og:image" content={`/assets/posts/${post.slug}/og.png`} />
       </Head>
 

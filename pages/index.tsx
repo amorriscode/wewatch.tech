@@ -20,7 +20,9 @@ const Index = ({ allPosts }: Props) => {
       <Layout>
         <Head>
           <title>Great tech talks distilled.</title>
+          <meta property="og:image" content="/assets/og.png" />
         </Head>
+
         <Container>
           <Logo />
 

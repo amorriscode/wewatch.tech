@@ -17,6 +17,11 @@ type Props = {
 const Posts = ({ allPosts }: Props) => {
   return (
     <Layout>
+      <Head>
+        <title>Posts | we watch tech</title>
+        <meta property="og:image" content="/assets/og.png" />
+      </Head>
+
       <Container>
         <Header />
         <div className="space-y-10">
