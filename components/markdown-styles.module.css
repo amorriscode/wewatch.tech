@@ -20,3 +20,11 @@
 .markdown a {
   @apply font-bold border-b-8 border-wwt-yellow;
 }
+
+.markdown figure {
+  @apply my-20;
+}
+
+.markdown figcaption {
+  @apply text-xs text-center font-bold;
+}

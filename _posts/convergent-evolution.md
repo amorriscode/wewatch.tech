@@ -48,17 +48,19 @@ I've seen a lot of complaints about JSX. If you're in the anti-JSX camp, perhaps
 
 It's very common to see unidirectional flow in React. It's encouraged. In Elm, it's a first class citizen. Legend has it that early Elm programmers kept seeing the same patterns in their code. The unidirectional flow naturally arose from the language itself.
 
-<img src="/assets/posts/convergent-evolution/elm-architecture.svg" />
-
-<div class="text-xs text-center font-bold">The Elm Architecture</div>
+<figure>
+    <img src="/assets/posts/convergent-evolution/elm-architecture.svg" />
+    <figcaption>The Elm Architecture</figcaption>
+</figure>
 
 In the Elm Architecture you can clearly see the unidirectional flow. It's a very functional pattern. Inside of Elm there is a `model`. It captures all the details about your application as data. We also have the `view`. This is a function that outputs your HTML. When users interact with the HTML, messages are sent and an `update` function handles changing the `model`.
 
 At Facebook they were using a similar architecture pattern called [Flux](https://facebook.github.io/flux). The popular library Redux even [got inspiration from Elm](https://redux.js.org/introduction/prior-art/#elm).
 
-<img src="/assets/posts/convergent-evolution/flux.svg" />
-
-<div class="text-xs text-center font-bold">Flux Application Architecture</div>
+<figure>
+    <img src="/assets/posts/convergent-evolution/flux.svg" />
+    <figcaption>Flux Application Architecture</figcaption>
+</figure>
 
 Both of these patterns have similarities. [André Staltz](https://twitter.com/andrestaltz) has [written a great blog post](https://staltz.com/unidirectional-user-interface-architectures.html) about unidirectional architectures so I recommend you give that a read. A major difference between Flux and the Elm Architecture is the fact that everything in the Elm Architecture is hierarchical. Components aren't just on the "View" layer.
 
@@ -78,10 +80,10 @@ The last thing we'll look at is static analysis. With React there isn't much to 
 
 Elm is a language so there is so much more to offer you out of the box. The [compiler is an assistant](https://elm-lang.org/news/compilers-as-assistants). It helps you find edge cases you might have missed. The compiler will even give beginner friendly hints!
 
-
-<img src="/assets/posts/convergent-evolution/compiler-error.png" />
-
-<div class="text-xs text-center font-bold">An Elm Compiler Error</div>
+<figure>
+    <img src="/assets/posts/convergent-evolution/compiler-error.png" />
+    <figcaption>An Elm Compiler Error</figcaption>
+</figure>
 
 ## A Tale of Two Organisms
 
