@@ -14,5 +14,9 @@
 }
 
 .markdown h3 {
-  @apply text-3xl mt-8 mb-4 leading-tight;
+  @apply text-2xl mt-8 mb-4 leading-tight font-bold;
+}
+
+.markdown a {
+  @apply font-bold border-b-8 border-wwt-yellow;
 }

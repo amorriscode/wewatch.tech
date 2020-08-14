@@ -16,6 +16,23 @@ type Props = {
   post: PostType
 }
 
+type PresenterProps = {
+  presenter: string
+  presenterTwitter: string
+}
+
+const Presenter = ({ presenter, presenterTwitter }: PresenterProps) => {
+  return (
+    <>
+      {
+        presenterTwitter
+         ? <a href={presenterTwitter} className="hover:text-wwt-yellow">{presenter}</a>
+         : {presenter}
+      }
+    </>
+  )
+}
+
 const Post = ({ post }: Props) => {
   return (
     <Layout>
@@ -27,11 +44,11 @@ const Post = ({ post }: Props) => {
           </h1>
 
           <p className="text-xl md:text-2xl bg-black text-white rounded-b-lg p-4 md:flex justify-between items-center">
-            <div>
-              presented by {post.presenter} <span className="text-wwt-yellow">@</span> {post.conference}
-            </div>
+            <span className="block">
+              presented by <Presenter presenter={post.presenter} presenterTwitter={post.presenterTwitter} /> <span className="text-wwt-yellow">@</span> {post.conference}
+            </span>
 
-            <div className="text-base md:text-lg"><DateFormatter dateString={post.date} /></div>
+            <span className="block text-base md:text-lg"><DateFormatter dateString={post.date} /></span>
           </p>
 
           <div className="video-container my-10 rounded-lg">
@@ -82,6 +99,7 @@ export async function getStaticProps({ params }: Params) {
     'slug',
     'excerpt',
     'presenter',
+    'presenterTwitter',
     'conference',
     'content',
     'embed',

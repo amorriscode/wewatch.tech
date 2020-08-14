@@ -5,6 +5,7 @@ type Post = {
   excerpt: string
   content: string
   presenter: string
+  presenterTwitter: string
   conference: string
   url: string
   embed: string
