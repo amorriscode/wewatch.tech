@@ -18,7 +18,11 @@
 }
 
 .markdown a {
-  @apply font-bold border-b-8 border-wwt-yellow;
+  @apply font-bold border-b-4 border-wwt-yellow;
+}
+
+.markdown a:hover {
+  @apply border-b-8;
 }
 
 .markdown figure {

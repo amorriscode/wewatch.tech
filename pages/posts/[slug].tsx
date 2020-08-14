@@ -67,6 +67,17 @@ const Post = ({ post }: Props) => {
             />
           </div>
         </article>
+
+        <div className="text-xl md:text-2xl bg-black text-white rounded-b-lg p-4 max-w-3xl mx-auto space-y-4">
+          <p>Hey! 👋</p>
+
+          <p>My name is <a href="https://anthonymorris.dev" className="border-b-4 border-wwt-yellow hover:text-wwt-yellow">Anthony Morris</a>. Builder of things.</p>
+
+          <p>I made <span className="font-bold">We Watch Tech</span> because I love watching conference talks. Writing about the talks helps me think more deeply. This is a place for learning and exploration.</p>
+
+          <p><a className="border-b-4 border-wwt-yellow hover:text-wwt-yellow" href="mailto:anthony@amorrissound.com">Let me know</a> if there is anything you'd like to see!</p>
+        </div>
+
         <style jsx>{`
           .video-container {
             position: relative;
