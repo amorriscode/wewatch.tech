@@ -36,6 +36,10 @@ const Presenter = ({ presenter, presenterTwitter }: PresenterProps) => {
 const Post = ({ post }: Props) => {
   return (
     <Layout>
+      <Head>
+        <meta property="og:image" content={`/assets/posts/${post.slug}/og.png`} />
+      </Head>
+
       <Container>
         <Header />
         <article>
