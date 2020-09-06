@@ -7,7 +7,10 @@ const Footer = () => {
       <Container>
         <div className="py-10 md:py-20 space-y-4">
           <h3 className="text-4xl lg:text-5xl font-bold">
-            Have you seen a great talk? <a className="link" href="mailto:anthony@amorrissound.com">Let me know!</a>
+            Have you seen a great talk?{' '}
+            <a className="link" href="mailto:hello@wewatch.tech">
+              Let me know!
+            </a>
           </h3>
 
           <Signup />
