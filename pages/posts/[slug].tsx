@@ -67,12 +67,13 @@ const Post = ({ post }: Props) => {
             </span>
           </p>
 
-          <div className="video-container my-10 rounded-lg">
+          <div className="video-container my-10 rounded-lg border-2 p-2 border-brand-blue">
             <iframe
               src={post.embed}
               frameBorder="0"
-              width="560"
-              height="315"
+              width="400px"
+              height="102px"
+              scrolling="no"
             ></iframe>
           </div>
 
@@ -113,7 +114,6 @@ const Post = ({ post }: Props) => {
             {' '} program. 
           
           </p>
-
           <p>
             <a
               className="border-b-4 border-white"
@@ -128,16 +128,11 @@ const Post = ({ post }: Props) => {
         <style jsx>{`
           .video-container {
             position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
+            height: 176px;
           }
           .video-container iframe,
           .video-container object,
           .video-container embed {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
           }

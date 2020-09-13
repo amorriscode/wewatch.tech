@@ -19,7 +19,7 @@ const Index = ({ allPosts }: Props) => {
     <>
       <Layout>
         <Head>
-          <title>Great tech talks distilled.</title>
+          <title>Stories from UBC Entrepreneurs.</title>
           <meta property="og:image" content="/assets/og.png" />
         </Head>
 

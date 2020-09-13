@@ -18,7 +18,7 @@ const Posts = ({ allPosts }: Props) => {
   return (
     <Layout>
       <Head>
-        <title>Posts | we watch tech</title>
+        <title>Posts | we@ubc</title>
         <meta property="og:image" content="/assets/og.png" />
       </Head>
 
@@ -40,7 +40,7 @@ const Posts = ({ allPosts }: Props) => {
                   <div className="text-base md:text-lg"><DateFormatter dateString={post.date} /></div>
                 </p>
 
-                <p className="hidden md:block text-xl mt-2">
+                <p className="hidden md:block text-xl mt-2 -my-10">
                   {post.excerpt}
                 </p>
               </a>
