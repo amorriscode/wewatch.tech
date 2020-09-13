@@ -27,7 +27,7 @@ const Meta = () => {
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta
         name="description"
-        content={`I watch conference talks so you don't have to.`}
+        content={`Podcast highlighting the stories of grit, failure & passion from UBC entrepreneurs.`}
       />
     </Head>
   )

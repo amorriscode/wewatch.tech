@@ -4,9 +4,9 @@ type Post = {
   date: string
   excerpt: string
   content: string
-  presenter: string
-  presenterTwitter: string
-  conference: string
+  guest: string
+  guestLinkedIn: string
+  venture: string
   url: string
   embed: string
 }

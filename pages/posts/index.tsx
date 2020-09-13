@@ -32,9 +32,9 @@ const Posts = ({ allPosts }: Props) => {
                   {post.title}
                 </p>
 
-                <p className="presenter text-xl md:text-2xl bg-black text-white rounded-b-lg p-4 md:flex justify-between items-center">
+                <p className="guest text-xl md:text-2xl bg-black text-white rounded-b-lg p-4 md:flex justify-between items-center">
                   <div>
-                    presented by {post.presenter} <span className="text-wwt-yellow">@</span> {post.conference}
+                    featuring {post.guest} <span className="text-brand-blue">@</span> {post.venture}
                   </div>
 
                   <div className="text-base md:text-lg"><DateFormatter dateString={post.date} /></div>
@@ -48,8 +48,8 @@ const Posts = ({ allPosts }: Props) => {
           ))}
         </div>
         <style jsx>{`
-          .post:hover .presenter {
-            color: #fbff00;
+          .post:hover .guest {
+            color: #0065ff;
           }
         `}</style>
       </Container>
@@ -65,8 +65,8 @@ export const getStaticProps = async () => {
     'date',
     'slug',
     'excerpt',
-    'presenter',
-    'conference',
+    'guest',
+    'venture',
   ])
 
   return {

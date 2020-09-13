@@ -2,7 +2,7 @@
 
 /* Write your own custom base styles here */
 :root {
-  --wwtYellow: #fbff00;
+  --brandBLUE: #0065ff;
 }
 
 a {
@@ -20,10 +20,15 @@ a:hover {
   height: 18px;
   bottom: 0;
   left: -2.5%;
-  background: var(--wwtYellow);
+  background: var(--brandBLUE);
   transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: -1;
   @apply rounded-b-lg;
+}
+
+.link:hover {
+  color: white;
+  transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover:after {

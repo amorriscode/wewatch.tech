@@ -26,9 +26,9 @@ const Index = ({ allPosts }: Props) => {
         <Container>
           <Logo />
 
-          <div className="rounded-lg bg-wwt-yellow w-full my-12 md:my-24 leading-tight space-y-10 md:space-y-20 p-10 md:p-20 font-bold">
-            <p className="text-6xl md:text-7xl">I watch conference talks so you don't have to.</p>
-            <p className="text-sm">(but you should too because they're totally awesome)</p>
+          <div className="rounded-lg bg-brand-blue w-full my-12 md:my-24 leading-tight space-y-10 md:space-y-20 p-10 md:p-20 font-bold text-white">
+            <p className="text-5xl md:text-7xl">Stories of grit, failure & passion from UBC entrepreneurs.</p>
+            <p className="text-sm">"All our dreams can come true, if we have the courage to pursue them." - Walt Disney</p>
           </div>
 
           <LatestPost post={latestPost} />
@@ -46,8 +46,8 @@ export const getStaticProps = async () => {
     'date',
     'slug',
     'excerpt',
-    'presenter',
-    'conference',
+    'guest',
+    'venture',
   ])
 
   return {

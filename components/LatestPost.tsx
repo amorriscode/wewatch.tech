@@ -14,20 +14,20 @@ function LatestPost({ post }: Props) {
       <div className="sm:w-2/3">
         <div className="flex justify-between items-end pb-2 font-bold">
           <h3 className="text-5xl md:text-6xl font-extrabold leading-none">
-            Latest Post
+            Latest Episode
           </h3>
 
           <DateFormatter dateString={post.date} />
         </div>
 
         <Link href="/posts/[slug]" as={`/posts/${post.slug}`}>
-          <a className="block bg-black rounded-b-lg text-white text-2xl p-10 hover:text-wwt-yellow hover:cursor-pointer">
+          <a className="block bg-black rounded-b-lg text-white text-2xl p-10 hover:text-brand-blue hover:cursor-pointer">
             <p className="text-5xl md:text-6xl font-bold">
               {post.title}
             </p>
 
             <p>
-              presented by {post.presenter} <span className="text-wwt-yellow">@</span> {post.conference}
+              featuring {post.guest} <span className="text-brand-blue">@</span> {post.venture}
             </p>
           </a>
         </Link>
@@ -36,7 +36,7 @@ function LatestPost({ post }: Props) {
       <div className="pt-10 sm:p-10 text-center sm:w-1/3 text-6xl font-bold">
         <Link href="/posts">
           <a className="link">
-            Read More
+            More Episodes
           </a>
         </Link>
       </div>

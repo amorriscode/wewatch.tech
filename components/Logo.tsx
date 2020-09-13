@@ -9,11 +9,11 @@ function Logo({ small }: Props) {
   return (
     <div style={{ width: 'fit-content' }} className={`${textSize} text-right font-bold tracking-tighter leading-tight`}>
       <div className={`${padding} whitespace-no-wrap`}>
-        we watch
+        we@UBC
       </div>
       <div className={`rounded-b-lg ${padding} bg-black text-white`}>
-        <span className="text-wwt-yellow">.</span>
-        tech
+        <span className="text-brand-blue">.</span>
+        podcast
       </div>
     </div>
   )

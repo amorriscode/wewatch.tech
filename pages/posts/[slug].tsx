@@ -17,20 +17,20 @@ type Props = {
   post: PostType
 }
 
-type PresenterProps = {
-  presenter: string
-  presenterTwitter: string
+type GuestProps = {
+  guest: string
+  guestLinkedIn: string
 }
 
-const Presenter = ({ presenter, presenterTwitter }: PresenterProps) => {
+const Guest = ({ guest, guestLinkedIn }: GuestProps) => {
   return (
     <>
-      {presenterTwitter ? (
-        <a href={presenterTwitter} className="hover:text-wwt-yellow">
-          {presenter}
+      {guestLinkedIn ? (
+        <a href={guestLinkedIn} className="hover:text-brand-blue">
+          {guest}
         </a>
       ) : (
-        { presenter }
+        { guest }
       )}
     </>
   )
@@ -54,12 +54,12 @@ const Post = ({ post }: Props) => {
 
           <p className="text-xl md:text-2xl bg-black text-white rounded-b-lg p-4 md:flex justify-between items-center">
             <span className="block">
-              presented by{' '}
-              <Presenter
-                presenter={post.presenter}
-                presenterTwitter={post.presenterTwitter}
+              featuring {' '}
+              <Guest
+                guest={post.guest}
+                guestLinkedIn={post.guestLinkedIn}
               />{' '}
-              <span className="text-wwt-yellow">@</span> {post.conference}
+              <span className="text-brand-blue">@</span> {post.venture}
             </span>
 
             <span className="block text-base md:text-lg">
@@ -84,7 +84,7 @@ const Post = ({ post }: Props) => {
           </div>
         </article>
 
-        <div className="rounded-lg bg-wwt-yellow w-full my-12 md:my-24 leading-tight p-5 md:p-10 font-bold text-xl md:text-2xl space-y-4 md:space-y-8">
+        <div className=" text-white rounded-lg bg-brand-blue w-full my-12 md:my-24 leading-tight p-5 md:p-10 font-bold text-xl md:text-2xl space-y-4 md:space-y-8">
           <div className="bg-white rounded-lg p-5 md:p-10">
             <Signup />
           </div>
@@ -92,30 +92,36 @@ const Post = ({ post }: Props) => {
           <p className="pt-2 md:pt-4">Hey! 👋</p>
 
           <p>
-            My name is{' '}
+            I'm {' '}
             <a
-              href="https://anthonymorris.dev"
-              className="border-b-4 border-black"
+              href="https://www.linkedin.com/in/alicezhao1991/"
+              className="border-b-4 border-white"
             >
-              Anthony Morris
+              Alice
             </a>
-            . Builder of things.
+            . (Clumsy) curious creator.
           </p>
 
           <p>
-            I made We Watch Tech because I love watching conference talks.
-            Writing about the talks helps me think more deeply. This is a place
-            for learning and exploration.
+            I created we@UBC because I was inspired by my mentors and peers in the  {' '}
+            <a
+              href="https://www.start.entrepreneurship.ubc.ca/"
+              className="border-b-4 border-white"
+            >
+              entrepreneurship@UBC
+            </a>
+            {' '} program. 
+          
           </p>
 
           <p>
             <a
-              className="border-b-4 border-black"
-              href="mailto:hello@wewatch.tech"
+              className="border-b-4 border-white"
+              href="mailto:azhao991@gmail.com"
             >
               Let me know
             </a>{' '}
-            if there is anything you'd like to see!
+            if there is anything you'd like to hear!
           </p>
         </div>
 
@@ -155,9 +161,9 @@ export async function getStaticProps({ params }: Params) {
     'date',
     'slug',
     'excerpt',
-    'presenter',
-    'presenterTwitter',
-    'conference',
+    'guest',
+    'guestLinkedIn',
+    'venture',
     'content',
     'embed',
   ])

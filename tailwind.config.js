@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'wwt-yellow': '#fbff00',
+        'brand-blue': '#0065ff',
       },
       letterSpacing: {
         tighter: '-.04em',
