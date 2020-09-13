@@ -40,7 +40,7 @@ const Post = ({ post }: Props) => {
   return (
     <Layout>
       <Head>
-        <title>{post.title} | we watch tech</title>
+        <title>{post.title} | we@UBC </title>
         <meta
           property="og:image"
           content={`/assets/posts/${post.slug}/og.png`}
@@ -161,7 +161,7 @@ export async function getStaticProps({ params }: Params) {
     'date',
     'slug',
     'excerpt',
-    'guest',
+    'presenter',
     'guestLinkedIn',
     'venture',
     'content',

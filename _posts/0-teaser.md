@@ -16,13 +16,13 @@ When you hit a bump in your entrepreneur journey, listen to this podcast.
 
 When you want to stop working for someone else's dreams and start building your own, listen to this podcast.
 
-Each story you hear is
+Each story you hear is:
 
-unique. 
+Unique. 
 
-real.
+Real.
 
-human.
+Human.
 
 Let our UBC entrepreneurs fill your cup with wisdom! 
 
