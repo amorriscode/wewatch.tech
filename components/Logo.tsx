@@ -7,7 +7,7 @@ function Logo({ small }: Props) {
   const padding = small ? 'px-2' : 'px-4'
 
   return (
-    <div style={{ width: 'fit-content' }} className={`${textSize} text-right font-bold tracking-tighter leading-tight`}>
+    <div style={{ width: 'max-content' }} className={`${textSize} text-right font-bold tracking-tighter leading-tight`}>
       <div className={`${padding} whitespace-no-wrap`}>
         <span className="font-normal">
         w
