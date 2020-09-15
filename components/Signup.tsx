@@ -1,10 +1,10 @@
 const Footer = () => {
   return (
     <form
-      action="https://buttondown.email/api/emails/embed-subscribe/wewatchtech"
+      action="https://buttondown.email/api/emails/embed-subscribe/weubc"
       method="post"
       target="popupwindow"
-      onSubmit={() => window.open('https://buttondown.email/wewatchtech', 'popupwindow')}
+      onSubmit={() => window.open('https://buttondown.email/weubc', 'popupwindow')}
       className="font-bold text-xl md:text-2xl"
     >
       <label htmlFor="bd-email">Subscribe to get the latest wisdom bomb in your inbox</label>
