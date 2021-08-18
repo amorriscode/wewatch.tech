@@ -32,3 +32,16 @@
 .markdown figcaption {
   @apply text-xs text-center font-bold;
 }
+
+.markdown ul,
+.markdown ol {
+  @apply ml-12;
+}
+
+.markdown ul {
+  @apply list-disc;
+}
+
+.markdown ol {
+  @apply list-decimal;
+}
