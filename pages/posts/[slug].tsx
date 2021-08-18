@@ -104,8 +104,8 @@ const Post = ({ post }: Props) => {
 
           <p>
             I made We Watch Tech because I love watching conference talks.
-            Writing about the talks helps me think more deeply. This is a place
-            for learning and exploration.
+            Writing about the talks makes me think more deeply about the topic.
+            For me, learning isn't a passive activity!
           </p>
 
           <p>
@@ -115,7 +115,7 @@ const Post = ({ post }: Props) => {
             >
               Let me know
             </a>{' '}
-            if there is anything you'd like to see!
+            if there are any talks you'd recommend!
           </p>
         </div>
 
